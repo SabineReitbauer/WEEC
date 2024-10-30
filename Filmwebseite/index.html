@@ -2,11 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filmwebseite</title>
   <link href="./css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<div class="master">
+<div class="master"><!--äußerster Container/Rahmen-->
   <div class="wrapper">
     <div class="header">
       <img src="image/textheader.png"/>
@@ -24,7 +25,10 @@
           <li><a href="#">Goodies</a></li>
         </ul>
       </div>
-
+      <!--Burger Menue-->
+      <div class="burger" onclick="toggleMenu()">
+        ☰
+      </div>
       <div class="imghead">
         <img src="./image/imageheader.jpg" alt="Headerbild mit den 3 Schauspielern">
       </div>
@@ -46,12 +50,12 @@
         <h1>
           Trailer
         </h1>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/_nX9_LUZtJY?si=jq05Hb5AMbzdhRYf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/_nX9_LUZtJY?si=jq05Hb5AMbzdhRYf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <br /><br />
-        <span id="b">
+        <b>
           A wise man once said, if there’s a fork on the road take it.<br />
           He failed to mention which way to turn.
-        </span>
+        </b>
         <br /><br />
         Ein Mann beschließt während einer Geschäftsreise, nicht fremdzugehen – eine Entscheidung, die eine Reihe bewegender und dramatischer Ereignisse rund um den Erdball nach sich zieht.
         <br /><br />
@@ -68,5 +72,13 @@
     </div>
   </div>
 </div>
+
+<script>
+  function toggleMenu() {
+    const navi = document.getElementById('navi');
+    navi.classList.toggle('open');
+  }
+</script>
+
 </body>
 </html>

@@ -6,15 +6,18 @@ body {
 }
 
 .master{
-    width: 948px;
+    width: 100%; /*nutze 100% des verfügbaren Bildschirmes*/
+    max-width: 948px; /*maximale Bildschirmgröße*/
     margin: 0 auto; /*mittig ausgerichtet*/
 }
 
 .wrapper{
-    width: 948px;
-    float: left; /*links angesiedelt*/
+    width: 100%;
+    max-width: 948px;
+    /*float: left; links angesiedelt*/
     background-color: #dcd4c7;
     padding-top: 37px;
+    padding-bottom: 37px;
 }
 
 .header > img {
@@ -27,6 +30,7 @@ body {
     margin-top: 10px;
     padding-right: 20px;
     height: 296px;
+    display: block;
 }
 
 ul#navi{
@@ -57,6 +61,7 @@ ul#navi a:hover{
 
 .imghead{
     float: left;
+    padding-top: 10px;
 }
 
 .float{
@@ -67,7 +72,7 @@ ul#navi a:hover{
     float: left;
     width: 170px;
     padding-right: 20px;
-    margin-top: 630px;
+    margin-top: 610px;
     text-align: right;
 }
 
@@ -84,25 +89,89 @@ ul#navi a:hover{
 
 .content-rechts{
     float: left;
-    height: 720px;
-    width: 700px;
+    height: 690px;
+    width: 75%;
+    max-width: 710px;
     background-color: #c4b7a2;
     padding: 2px 20px 10px 20px;
     /* top left bottom right*/
-}
-
-.b{
-    font-weight: bold;
+    font-size: small;
 }
 
 .footer > img {
     width: 100%;
 }
 
+.imghead > img {
+    width: 99%;
+}
+
+h1 {
+    font-size: medium;
+}
+
+.burger {
+    display: none;
+    margin: 10px;
+    position: absolute;
+    left: 20px;
+    z-index: 1000;
+}
+
+iframe {
+    width: 700px;
+    height: 455px;
+}
+
 /* Media Queries*/
 
 @media screen and (max-width: 800px) {
-    .content-links{display: none;}
-    .content-rechts{width: 100%;}
-    .content-links-mobile{display: block;}
+    .content-links{
+        display: none;
+    }
+    .content-rechts{
+        width: 90%;
+        max-width: none;
+        height: auto;
+    }
+    .content-links-mobile{
+        display: block;
+        vertical-align: text-bottom;
+        font-variant: small-caps;
+        color: white;
+        font-weight: bold;
+    }
+    .burger{
+        display: block;
+        cursor: pointer;
+    }
+    #navi{
+        display: none;
+    }
+    #navi.open{
+        display: block;
+        position: absolute;
+        top: 110px;
+        left: 0;
+        width: auto;
+        background-color: #dcd4c7;
+        z-index: 1000; /* Damit das Menü über dem restlichen Inhalt liegt */
+        text-align: left;
+        padding-left: 30px;
+    }
+    .imghead{
+        margin-top: 0px;
+        position: relative;
+    }
+    .imghead > img {
+        width: 99%;
+    }
+    iframe{
+        height: auto;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+    }
+    .navi{
+        height: 10px;
+    }
 }
