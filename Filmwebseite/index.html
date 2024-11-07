@@ -7,6 +7,23 @@
   <link href="./css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
+<script>
+  function bildChange(){
+    const bild = document.getElementById("bild1");
+
+    if (bild.src.includes("imageheader.jpg")) {
+      bild.src = "./image/matrix.png";
+      bild.style.width = "748px";
+      bild.style.height = "330px";
+      document.getElementById("text").innerText = "Sie befinden sich in der Matrix!";
+    } else {
+      bild.src = "./image/imageheader.jpg";
+      bild.style.width = "";
+      bild.style.height = "";
+      document.getElementById("text").innerText = "";
+    }
+  }
+</script>
 <div class="master"><!--äußerster Container/Rahmen-->
   <div class="wrapper">
     <div class="header">
@@ -23,6 +40,8 @@
           <li><a href="#">Fotos</a></li>
           <li><a href="#">Videos</a></li>
           <li><a href="#">Goodies</a></li>
+          <br>
+          <button onclick="bildChange()">Bild ändern</button>
         </ul>
       </div>
       <!--Burger Menue-->
@@ -30,7 +49,8 @@
         ☰
       </div>
       <div class="imghead">
-        <img src="./image/imageheader.jpg" alt="Headerbild mit den 3 Schauspielern">
+        <h1 id="text"></h1>
+        <img id="bild1" src="./image/imageheader.jpg" alt="Headerbild mit den 3 Schauspielern">
       </div>
 
      <div class="float">

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <script>
+    let name = "Sabine"; // Variable definieren
+    const groesse = 168; // Konstante definieren
+    let person = ["Anna", "Dominik", "Nadine"]; //Array
+    console.log("JavaScript ist sichtbar :)"); // Ausgabe
+    console.log(name, groesse, person[0]);
+    let alter = 37;
+    if (alter >= 18) { //IF-Anweisung
+      console.log("Du bist volljährig. Party");
+    } else {
+      console.log("Du bist minderjährig.");
+    }
+    for (let i=0; i<5; i++) { //Schleife
+      console.log("Nummer: ", i);
+    }
+
+    function willkommen(name) { //Funktion zur Namensausgabe
+      return "Hallo " + name + "!";
+    }
+    console.log(willkommen(name));
+
+    function alterhoch(alter) { //Funktion zum Alterhochzählen
+      return alter + 1;
+    }
+    console.log(alterhoch(alter));
+
+    function textChange() { //Funktion um den Anzeigetext zu ändern
+      document.getElementById("headtext").innerText = "Tsssschauuuuu!";
+    }
+  </script>
+  <h1 id="headtext">Hallo!!!</h1>
+  <button onClick="textChange()">Text bitte ändern</button>
+</body>
+</html>
